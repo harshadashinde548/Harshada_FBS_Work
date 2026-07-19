@@ -1,0 +1,9 @@
+#write a program to caclcuate profit or loss
+
+Cost_Price=int(input("Enter the Cost Price:"))
+Selling_Price=int(input("Enter the Selling Price:"))
+if(Cost_Price<Selling_Price):
+    print("profit")
+else:
+    print("Loss") 
+       

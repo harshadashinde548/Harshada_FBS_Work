@@ -1,0 +1,68 @@
+create database fbs;
+
+show databases;
+
+ create table employess;
+
+ create table employee(id int,name varchar(50),salary decimal(7,2),age int,gender char(3));
+
+
+ show tables;
+
+alter table employee
+add column demo2 varchar(25) first;
+
+
+alter table employee
+ add column demo varchar(25) after age;
+ 
+
+alter table employee
+ drop column demo;
+
+
+alter table employee
+ drop column demo2;
+
+alter table employee
+ add primary key(id);
+
+desc employee;
+
+alter table employee
+add column email varchar(25) ;
+
+
+
+alter table employee
+ modify column email varchar(20) unique;
+
+
+ alter table employee
+ modify column name varchar(20) not null;
+
+
+ alter table employee
+modify column salary decimal(7,2) default(20000);
+
+
+alter table employee
+ modify column age int check(age>18);
+
+
+show create table employee;
+
+
+create table department(dept_id int primary key,
+dept_name varchar(20) not null,dept_loc varchar(20) not null);
+
+
+alter table employee
+ add column dept_id int;
+
+
+alter table employee add foreign key(dept_id)
+references department(dept_id);
+
+alter table employee
+ drop constraint employee_chk_1;
